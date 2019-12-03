@@ -69,7 +69,6 @@ void Pool<R, Args...>::waitTasks()
 			return;
 		}
 		auto function = get<0>(tasks.front());
-		//auto sw= get<1>(tasks.front());
 		tuple<Args...> params = get<1>(tasks.front());
 		promise<R>* p = get<2>(tasks.front());
 		tasks.pop();
