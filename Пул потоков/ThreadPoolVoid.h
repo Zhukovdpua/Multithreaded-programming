@@ -1,3 +1,5 @@
+// Специализация для void
+
 template<typename ...Args>
 class Pool<void, Args...> :Base {
 private:
