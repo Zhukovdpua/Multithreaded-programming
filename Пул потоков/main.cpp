@@ -31,11 +31,11 @@ void tsk4(double a, string s){
 
 void test() {
 	auto poolObject1 = make_pool<ulli, int, int>();
-	auto poolObject2 = make_pool<ulli, int, int>(1); //не создаст пул, т.к уже существует пул с такой сигнатурой
+	auto poolObject2 = make_pool<ulli, int, int>(1); // РЅРµ СЃРѕР·РґР°СЃС‚ РїСѓР», С‚.Рє СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РїСѓР» СЃ С‚Р°РєРѕР№ СЃРёРіРЅР°С‚СѓСЂРѕР№
 	auto poolObject3 = make_pool<void, string>(2);
 	auto poolObject4 = make_pool<void, double, string>(1);
 
-	auto return_from_pool1 = poolObject1->addTask(tsk1, 1, 1000); // пул возвращает std::future, если возвращаемый тип не void
+	auto return_from_pool1 = poolObject1->addTask(tsk1, 1, 1000); // addtask() РІРѕР·РІСЂР°С‰Р°РµС‚ std::future, РµСЃР»Рё РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ С‚РёРї РЅРµ void
 	auto return_from_pool2 = poolObject1->addTask(tsk2, 56, 91);
 	poolObject3->addTask(tsk3, "tsk3");
 
