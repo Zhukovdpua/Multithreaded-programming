@@ -1,5 +1,3 @@
-#include <vector>
-#include <iostream>
 #include "Matrix.h"
 #include "MultapleMatrix.h"
 using namespace std;
