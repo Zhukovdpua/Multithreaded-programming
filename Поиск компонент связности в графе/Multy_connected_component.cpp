@@ -167,7 +167,7 @@ void Multy_connected_component::Pool::waitTasks(const int thread_count, promise<
 		}
 
 		int index = g->isAll(g->get_start(), thread_count);
-		cout << " "; // áåç ýòîé ñòðîêè â Release ñáîðêå ïðîãðàììà ìîæåò ðàáîòàòü íå êîððåêòíî, â òîì ÷èñëå è àâàðèéíî çàâåðøèòñÿ. Ïî÷åìó íå ïîíÿòíî.
+		cout << " "; // Ð‘ÐµÐ· ÑÑ‚Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² Release ÑÐ±Ð¾Ñ€ÐºÐµ Ð¿Ñ€Ð¸ Ð±Ð¾Ð»ÐµÐµ Ñ‡ÐµÐ¼ Ð¾Ð´Ð½Ð¾Ð¼ Ð¿Ð¾Ñ‚Ð¾ÐºÐµ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð¼Ð¾Ð¶ÐµÑ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ñ‚ÑŒ Ð½Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾, Ð² Ñ‚Ð¾Ð¼ Ñ‡Ð¸ÑÐ»Ðµ Ð¸ Ð°Ð²Ð°Ñ€Ð¸Ð¹Ð½Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐ¸Ñ‚ÑÑ. ÐŸÐ¾Ñ‡ÐµÐ¼Ñƒ Ð½Ðµ Ð¿Ð¾Ð½ÑÑ‚Ð½Ð¾.
 		mt.lock();
 		g->push_to_smallests(index);
 		if (g->smallests_size() == thread_count) {		
